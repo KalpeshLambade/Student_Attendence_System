@@ -1,0 +1,29 @@
+Steps 
+for Adding Students
+
+1. Create Html to get info of student.❌
+2. Take that students from to html and store into localstorage.
+3. Pass student data from html to js(script).
+4. Pass student data from js(script) to html.
+
+For displaying Students
+
+1. Make structure of html data.
+2. Make Structure for making attendence. (Present, Absent)
+3. Take student list from localstorage into js.
+4. Add student into html by using js.
+
+For making attendence
+
+1. Present -function - db- present with date.
+1. Absent -function - db- absent with date.
+
+INPUT ADD STUDENT NAME -
+
+1. Avinash -[Present] [Absent]
+2. Ankita -[Present] [Absent]
+
+
+                Avinash Ankita  Kalpesh
+1.  23/02/2023  Present Absent  Present
+2.  24/02/2023  Absent  Present Present
