@@ -1,0 +1,51 @@
+@media screen and (max-width:500px) {
+    #nav{
+        height: 5%;
+    }
+    #nav>div:nth-child(1){
+        width: 10%;
+        font-size: 4vw;
+      }
+      #nav>div:nth-child(2){
+        width: 65%;
+        font-size: 3vw;
+      }
+      #nav>div:nth-child(3){
+        width: 14%;
+        font-size: 3vw;
+        align-items: center;
+      }
+      #nav>div:nth-child(3) >p{
+        font-size: 2.5vw;
+      }
+      #nav>div:nth-child(3) >i{
+        font-size: 2vw;
+      }
+      #gettingInfo{
+        height: 8%;
+      }
+      #gettingInfo >p{
+        font-size: 4vw;
+        
+      }
+      #gettingInfo >div{
+        height: 30%;
+      }
+      #gettingInfo >div >input{
+        font-size: 2vw;
+        width: 60%;
+      }
+      #gettingInfo >div >button{
+        height: 60%;
+        font-size: 2vw;
+        width: 30%;
+      } 
+      .sheet >h2{
+        font-size: 4vw;
+      }
+      #markingAttendance,
+      #displayingStudentsList,#sheet-mark {
+        font-size: 3vw;
+      }
+}
+

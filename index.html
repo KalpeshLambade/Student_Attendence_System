@@ -6,39 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Attendence System</title>
 
-    <style>
-      #gettingInfo{
-        width: 50%;
-        margin: auto;
-        border: 1px solid red;
-        height: 80px;
-        text-align: center;
-      }
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/media.css">
+    <script
+      src="https://kit.fontawesome.com/d98822fee5.js"
+      crossorigin="anonymous"
+    ></script>
 
-      #markingAttendance, #displayingStudentsList{
-        width: 60%;
-        margin: auto;
-        border: 1px solid blue;
-        text-align: center;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Source+Serif+Pro:ital@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="gettingInfo">
-      <label>Add Student</label><br />
-      <input
-        id="addingStudent"
-        type="text"
-        placeholder="Add student here.."
-      /><br />
-      <button onclick="addStudent()">Add Student</button>
+    <div id="full-page">
+      <div id="nav">
+        <div><i class="fa-solid fa-bars"></i></div>
+        <div><h3>Attendance Managment System</h3></div>
+        <div>
+          <div><i class="fa-solid fa-chalkboard-user"></i></div>
+          <p>Admin</p>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+
+      <div id="gettingInfo">
+        <p>Register Student</p>
+        <div>
+          <input
+            id="addingStudent"
+            type="text"
+            placeholder="Add student Name here.."
+          />
+          <button onclick="addStudent()">Add Student</button>
+        </div>
+      </div>
+
+      <div class="sheet">
+        <h2>Mark Attendence</h2>
+        <div id="markingAttendance"></div>
+      </div>
+
+      <div class="sheet">
+        <h2>Attendence Sheet</h2>
+        <div id="displayingStudentsList"></div>
+      </div>
+      
     </div>
-
-    <h2>Mark Attendence</h2>
-    <div id="markingAttendance"></div>
-
-    <h2>Attendence Sheet</h2>
-    <div id="displayingStudentsList"></div>
 
     <script src="/script.js"></script>
   </body>

@@ -19,7 +19,7 @@ function displayStudentList(){
     var divFromHtml = document.getElementById('displayingStudentsList');
     console.log(divFromHtml, 'divFromHtml');
 
-    var student =[];
+    var student =[`<div id="sheet-mark"><p>ID</p><p>Date</p><p>Student Name</p><p>status</p></div>`];
 
     for( var i=0; i < studentList.length; i++){
         student += `<div><p>${studentList[i]}</p></div>`;
@@ -40,7 +40,7 @@ function markingAttence(){
     var divFromHtml = document.getElementById('markingAttendance');
     console.log(divFromHtml, 'divFromHtml');
 
-    var student =[];
+    var student =[`<div id="sheet-mark"><p>ID</p><p>Date</p><p>Student Name</p><p>Present/Absent</p></div>`];
 
     for( var i=0; i < studentList.length ; i++){
         student += `<div><p>${studentList[i]}</p></div>`;
