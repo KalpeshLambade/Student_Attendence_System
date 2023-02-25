@@ -68,6 +68,16 @@
     margin: 1.5% auto;
     font-size: 1.5vw;
   }
+  #markingAttendance >div{
+    display: flex;
+    /* justify-content: space-around; */
+  }
+  #markingAttendance >div >p:nth-child(1){
+    margin: 0 100px 0 200px;
+  }
+  #markingAttendance >div >p:nth-child(2){
+    margin-right: 100px;
+  }
 
   /* Title attendance-mark */
   #sheet-mark{
