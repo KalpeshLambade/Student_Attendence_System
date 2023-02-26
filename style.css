@@ -167,6 +167,11 @@
     display: flex;
     justify-content: space-evenly;
   }
+  #studentsNames >div{
+    border: 1px solid magenta;
+    
+  }
+
   #displayingStudentsList >div:nth-child(2){
     width: 100%;
     border: 1px solid tomato;
@@ -178,10 +183,17 @@
     border: 1px solid green;
     
   }
-  #displayStatus{
+  #first{
     width: 75%;
     height: 100px;
+    border: 1px solid orange;
+    display:flex;
+    justify-content: space-evenly;
+
+  }
+  #first >div{
     border: 1px solid magenta;
+    width:fit-content;
 
   }
 
