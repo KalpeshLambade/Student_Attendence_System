@@ -58,9 +58,7 @@
     font-size: 2.3vw;
   }
 
-
-  #markingAttendance,
-  #displayingStudentsList {
+  #markingAttendance{
     width: 90%;
     margin: auto;
     border: 1px solid #A6A9B6;
@@ -70,15 +68,13 @@
   }
   #markingAttendance >div{
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
   }
-  #markingAttendance >div >p:nth-child(1){
-    margin: 0 100px 0 200px;
+  #markingAttendance >div >p{
+    border:1px solid grey;
+    width:25%;
   }
-  #markingAttendance >div >p:nth-child(2){
-    margin-right: 100px;
-  }
-
+  
   /* Title attendance-mark */
   #sheet-mark{
     display: flex;
@@ -97,7 +93,7 @@
 }
 /* navbar section */
   #full-page{
-    height:100vh;
+    height:120vh;
     background-image: url("https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1060&t=st=1677156418~exp=1677157018~hmac=97742e99283aa71f058355ee3cb31580c709ab6455cbb685ff93226e4d049184");
     background-size: 100% 100%;
   }
@@ -150,3 +146,44 @@
     /* border: 1px solid red; */
     margin-top: 5%;
   }
+
+  #displayingStudentsList {
+    width: 90%;
+    margin: auto;
+    
+  }
+  #displayingStudentsList >div:nth-child(1){
+    width: 100%;
+    border: 1px solid tomato;
+    display: flex;
+  }
+  #displayingStudentsList >div:nth-child(1)>div:first-child{
+    width: 25%;
+    border: 1px solid red;
+  }
+  #studentsNames{
+    width: 75%;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #displayingStudentsList >div:nth-child(2){
+    width: 100%;
+    border: 1px solid tomato;
+    display: flex;
+  }
+  #displayDates{
+    width: 25%;
+    height: 100px;
+    border: 1px solid green;
+    
+  }
+  #displayStatus{
+    width: 75%;
+    height: 100px;
+    border: 1px solid magenta;
+
+  }
+
+  
+  
