@@ -204,7 +204,7 @@ function dispalyingStudentAttendance() {
 
   // console.log(dates, "dates here");
   var finalArrayWithAtt = [];
-  var settingDates = ['2023-02-26'];
+  var settingDates = ['2023-02-27'];
 
   for(var i=0; i < dataFromLs.length ; i++){
 
