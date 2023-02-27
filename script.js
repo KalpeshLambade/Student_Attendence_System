@@ -55,7 +55,7 @@ function present(index) {
   // console.log("index",index);
   var dateAndTime = new Date();
   var date = dateAndTime.toJSON().slice(0, 10);
-  // console.log(date);
+  console.log(date);
 
   var studentListFromLs = JSON.parse(localStorage.getItem("StudentList"));
   var user = studentListFromLs[index];
@@ -68,8 +68,8 @@ function present(index) {
   }
 
   if (flag == false) {
-    var obj = {};
-    obj[date] = "Present";
+    var obj = {}; // obj ={date:"present"}
+    obj[date] = "Present";  // {25-02-2023 :"present"} 
     user.attendance.push(obj);
     localStorage.setItem("StudentList", JSON.stringify(studentListFromLs));
   } else {
