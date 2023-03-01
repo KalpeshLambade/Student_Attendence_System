@@ -165,11 +165,11 @@ function test() {
     // console.log(value,"value");
     displayDates += `<div><p class="font-size">${key}</p></div>`;
 
-    var statusTemp =[];
+    var statusTemp =[]; //add temp array to solve the problem of inline addding of attendance
     for(var k of value){
-      statusTemp += `<p>${k}</p>`;
+      statusTemp += `<p>${k}</p>`; //adding attendance to temp variable
     }
-    displayStatus += `<div class="font-size">${statusTemp}</div>`
+    displayStatus += `<div class="font-size">${statusTemp}</div>`; //passing temp array to display array which creates black view for new date  
 
   }
 
