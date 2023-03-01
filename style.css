@@ -74,6 +74,14 @@
     border:1px solid grey;
     width:25%;
   }
+  #markingAttendance >div >p:nth-child(3) >i{
+    color:green;
+    cursor: pointer;
+  }
+  #markingAttendance >div >p:nth-child(4) >i{
+    color:red;
+    cursor: pointer;
+  }
   
   /* Title attendance-mark */
   #sheet-mark{
@@ -154,48 +162,52 @@
   }
   #displayingStudentsList >div:nth-child(1){
     width: 100%;
-    border: 1px solid tomato;
+    border: 1px solid grey;
     display: flex;
   }
   #displayingStudentsList >div:nth-child(1)>div:first-child{
-    width: 25%;
-    border: 1px solid red;
+    width: 10%;
+    border-right: 1px solid grey;
   }
   #studentsNames{
-    width: 75%;
-    border: 1px solid blue;
+    width: 90%;
+    /* border: 1px solid grey; */
     display: flex;
     justify-content: space-evenly;
   }
   #studentsNames >div{
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
     
   }
 
   #displayingStudentsList >div:nth-child(2){
     width: 100%;
-    border: 1px solid tomato;
+    border: 1px solid grey;
     display: flex;
   }
   #displayDates{
-    width: 25%;
+    width: 10%;
     height: 100px;
-    border: 1px solid green;
+    /* border: 1px solid red; */
     
   }
-  #first{
-    width: 75%;
+  #attendance-status{
+    width: 90%;
     height: 100px;
-    border: 1px solid orange;
+    border-left: 1px solid grey;
     display:flex;
     justify-content: space-evenly;
 
   }
-  #first >div{
-    border: 1px solid magenta;
+  #attendance-status >div{
+    /* border: 1px solid magenta; */
     width:fit-content;
 
   }
+  .font-size{
+    font-size:1.6vw;
+  }
+ 
 
   
   

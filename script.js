@@ -13,7 +13,6 @@ function addStudent() {
   document.getElementById("addingStudent").value = "";
   markingAttence();
   displayStudentList();
-
 }
 
 function getRealTime() {
@@ -67,9 +66,10 @@ function present(index) {
 
   if (flag == false) {
     var obj = {}; // obj ={date:"present"}
-    obj[date] = "Present";  // {25-02-2023 :"present"} 
+    obj[date] = "Present"; // {25-02-2023 :"present"}
     user.attendance.push(obj);
     localStorage.setItem("StudentList", JSON.stringify(studentListFromLs));
+    test();
   } else {
     alert("already Marked");
   }
@@ -96,6 +96,7 @@ function absent(index) {
     obj[date] = "Absent";
     user.attendance.push(obj);
     localStorage.setItem("StudentList", JSON.stringify(studentListFromLs));
+    test();
   } else {
     alert("already Marked");
   }
@@ -113,10 +114,9 @@ function displayStudentList() {
   var student = [];
 
   for (var i = 0; i < studentList.length; i++) {
-    student += `<div><p>${studentList[i].nameOfStudent}</p></div>`;
-
+    student += `<div><p class="font-size">${studentList[i].nameOfStudent}</p></div>`;
   }
-  
+
   divFromHtml.innerHTML = student;
 }
 displayStudentList();
@@ -125,15 +125,16 @@ function test() {
   var ItemFromLS = JSON.parse(localStorage.getItem("StudentList"));
   // console.log(ItemFromLS[0].attendance);
 
-
-  var obj ={};
+  var obj = {};
   var storeDates = [];
   // var storeAttedance =[];
 
-  for (var i = 0; i < ItemFromLS.length; i++) { //loop for student
+  for (var i = 0; i < ItemFromLS.length; i++) {
+    //loop for student
     // console.log(ItemFromLS[i].attendance, "Indentifier");
 
-    for (var j = 0; j < ItemFromLS[i].attendance.length; j++) { // loop for attendance array
+    for (var j = 0; j < ItemFromLS[i].attendance.length; j++) {
+      // loop for attendance array
       // console.log(ItemFromLS[i].attendance[j], "Indentifier2");
 
       for (var [key, value] of Object.entries(ItemFromLS[i].attendance[j])) {
@@ -141,11 +142,10 @@ function test() {
 
         if (!storeDates.includes(key)) {
           storeDates.push(key);
-          
-          obj[key] =[];
+
+          obj[key] = [];
         }
         obj[key].push(value);
-        
       }
     }
     //Object.entries() return key and value
@@ -154,11 +154,30 @@ function test() {
   // console.log(storeAttedance,"attendance");
   console.log(obj);
 
+  var displayDatesFromHtml = document.getElementById("displayDates");
+  var displayStatusFromHtml = document.getElementById("attendance-status");
+
+  var displayDates = [];
+  var displayStatus = [];
+
+  for (var [key, value] of Object.entries(obj)) {
+    // console.log(key,"keys");
+    // console.log(value,"value");
+    displayDates += `<div><p class="font-size">${key}</p></div>`;
+
+    var statusTemp =[];
+    for(var k of value){
+      statusTemp += `<p>${k}</p>`;
+    }
+    displayStatus += `<div class="font-size">${statusTemp}</div>`
+
+  }
+
+  console.log(displayDates);
   
+
+  displayStatusFromHtml.innerHTML = displayStatus;
+  displayDatesFromHtml.innerHTML = displayDates;
 }
 
 test();
-
-
-
-
