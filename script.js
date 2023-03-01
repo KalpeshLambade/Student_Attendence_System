@@ -117,6 +117,7 @@ function displayStudentList() {
   }
 
   divFromHtml.innerHTML = student;
+  test();
 }
 displayStudentList();
 
@@ -146,6 +147,9 @@ function test() {
         }
         obj[key].push(value);
       }
+    }
+    if(ItemFromLS[i].attendance.length === 0){
+      obj[key].push("No Data");
     }
     //Object.entries() return key and value
   }
