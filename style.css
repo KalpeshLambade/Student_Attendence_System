@@ -173,13 +173,14 @@
     width: 90%;
     /* border: 1px solid grey; */
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
   }
   #studentsNames >div{
     /* border: 1px solid magenta; */
-    
+    width: 10%;
+    text-align: center;
   }
-
+  
   #displayingStudentsList >div:nth-child(2){
     width: 100%;
     border: 1px solid grey;
@@ -201,12 +202,18 @@
     /* border: 1px solid magenta; */
     width:100%;
     display:flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 
   }
-  .font-size{
+  .font-size,.font{
     font-size:1.6vw;
   }
+  .font-size >p{
+    /* border: 1px solid red; */
+    width:10%;
+    text-align:center;
+  }
+
   
  
 

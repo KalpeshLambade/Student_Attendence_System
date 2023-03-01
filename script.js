@@ -166,7 +166,7 @@ function test() {
   for (var [key, value] of Object.entries(obj)) {
     // console.log(key,"keys");
     console.log(value,"value");
-    displayDates += `<div><p class="font-size">${key}</p></div>`;
+    displayDates += `<div><p class="font">${key}</p></div>`;
 
     var statusTemp = []; //add temp array to solve the problem of inline addding of attendance
     for (var k of value) {
