@@ -14,8 +14,6 @@ function addStudent() {
   markingAttence();
   displayStudentList();
 
-  // dispalyStatus();
-  // displayDate();
 }
 
 function getRealTime() {
@@ -117,115 +115,50 @@ function displayStudentList() {
   for (var i = 0; i < studentList.length; i++) {
     student += `<div><p>${studentList[i].nameOfStudent}</p></div>`;
 
-    // displayDate(i);
-    // dispalyStatus(i);
   }
-  //   console.log(student, "student");
-
+  
   divFromHtml.innerHTML = student;
 }
 displayStudentList();
 
-// // *********dispaly dates of attendance
-// function displayDate(index) {
-//   var dateFromLS = JSON.parse(localStorage.getItem("StudentList"));
-//   var dateOfStudent = dateFromLS[index].attendance;
+function test() {
+  var ItemFromLS = JSON.parse(localStorage.getItem("StudentList"));
+  // console.log(ItemFromLS[0].attendance);
 
-//   // console.log(nameOfStudent);
-//   var result = dateOfStudent.flatMap(Object.keys);
-//   // console.log(result);
 
-//   var divFromHtml = document.getElementById("displayDates");
+  var obj ={};
+  var storeDates = [];
+  // var storeAttedance =[];
 
-//   var dates = [];
+  for (var i = 0; i < ItemFromLS.length; i++) { //loop for student
+    // console.log(ItemFromLS[i].attendance, "Indentifier");
 
-//   for (var j of result) {
-//     // console.log(j);
-//     dates += `<div><p>${j}</p></div>`;
-//   }
+    for (var j = 0; j < ItemFromLS[i].attendance.length; j++) { // loop for attendance array
+      // console.log(ItemFromLS[i].attendance[j], "Indentifier2");
 
-//   // console.log(dates);
-//   divFromHtml.innerHTML = dates;
-// }
+      for (var [key, value] of Object.entries(ItemFromLS[i].attendance[j])) {
+        // console.log(`${key}: ${value} keys and values`);
 
-// displayDate();
-
-// //********** display Present or Not
-// function dispalyStatus(index) {
-//   // console.log(index);
-//   var dateFromLS = JSON.parse(localStorage.getItem("StudentList"));
-//   var statusOfStudent = dateFromLS[index].attendance;
-
-//   // console.log(nameOfStudent);
-//   var result = statusOfStudent.flatMap(Object.values);
-//   // console.log(result);
-
-//   var divFromHtml = document.getElementById("displayStatus");
-
-//   var status = [``];
-
-//   for (var j of result) {
-//     // console.log(j);
-//     status += `<div><p>${j}</p></div>`;
-//   }
-
-//   // console.log(status);
-//   divFromHtml.innerHTML = status;
-// }
-
-// dispalyStatus();
-
-function dispalyingStudentAttendance() {
-  var for25 = document.getElementById("first");
-
-  var forDates =document.getElementById("displayDates");
-  
-  var dataFromLs = JSON.parse(localStorage.getItem("StudentList"));
-
-  var dates = [];
-
-  for (var k = 0; k < dataFromLs.length; k++) {
-    for (var l = 0; l < dataFromLs[k].attendance.length; l++) {
-
-      // console.log(dateFromLs[k].attendance[l]);
-      // console.log(Object.keys(dateFromLs[k].attendance[l][0]));
-
-      if( !dates.includes(`<p>${(Object.keys(dataFromLs[k].attendance[l])[0])}</p>`)){
-        dates+=`<p>${(Object.keys(dataFromLs[k].attendance[l])[0])}</p>`;
+        if (!storeDates.includes(key)) {
+          storeDates.push(key);
+          
+          obj[key] =[];
+        }
+        obj[key].push(value);
+        
       }
-      // dates.push((Object.keys(dateFromLs[k].attendance[l])[0]));
-  
     }
+    //Object.entries() return key and value
   }
+  // console.log(storeDates, "Dates");
+  // console.log(storeAttedance,"attendance");
+  console.log(obj);
 
-  console.log(dates);
-  forDates.innerHTML = dates;
-
-
-  // console.log(dates, "dates here");
-  var finalArrayWithAtt = [];
-  var settingDates = ['2023-02-27'];
-
-  for(var i=0; i < dataFromLs.length ; i++){
-
-    console.log(dataFromLs[i].attendance,"heree");
-      if (dataFromLs[i].attendance.length) {
-          for (var j = 0; j < dataFromLs[i].attendance.length; j++) {
-              for (var k = 0; k < settingDates.length; k++) {
-                  if (dataFromLs[i].attendance[j][settingDates[k]]) {
-                      // console.log((dataFromLs[i].attendance[j][settingDates[k]]), dataFromLs[i].nameOfStudent, dd[k])
-                      finalArrayWithAtt += `<div>${dataFromLs[i].attendance[j][settingDates[k]]}</div>`;
-                  }
-              }
-          }
-      } else {
-          finalArrayWithAtt += `<div>No data</div>`;
-      }
-  }
-  // console.log(check, 'check')
-  for25.innerHTML = finalArrayWithAtt;
+  
 }
 
-dispalyingStudentAttendance();
+test();
+
+
 
 
