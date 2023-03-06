@@ -38,8 +38,8 @@ function markingAttence() {
   for (var i = 0; i < studentList.length; i++) {
     student += `<div><p>${i + 1}</p><p>${
       studentList[i].nameOfStudent
-    }</p><p><i class="fa-solid fa-check" onClick="present(${i})"></i></p>
-    <p><i class="fa-solid fa-xmark" onClick="absent(${i})"></i></p></div>`;
+    }</p><p><i class="fa-solid fa-circle-check" onClick="present(${i})"></i></p>
+    <p><i class="fa-solid fa-circle-xmark" onClick="absent(${i})"></i></p></div>`;
   }
 
   //   console.log(student, "student");
