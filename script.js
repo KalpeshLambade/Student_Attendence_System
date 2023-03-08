@@ -43,7 +43,6 @@ function markingAttence() {
   }
 
   //   console.log(student, "student");
-
   divFromHtml.innerHTML = student;
 }
 
@@ -162,19 +161,17 @@ function test() {
 
   for (var [key, value] of Object.entries(obj)) {
     // console.log(key,"keys");
-    // console.log(value,"value");
+    console.log(value,"value");
     displayDates += `<div><p class="font-size">${key}</p></div>`;
 
-    var statusTemp =[]; //add temp array to solve the problem of inline addding of attendance
-    for(var k of value){
+    var statusTemp = []; //add temp array to solve the problem of inline addding of attendance
+    for (var k of value) {
       statusTemp += `<p>${k}</p>`; //adding attendance to temp variable
     }
-    displayStatus += `<div class="font-size">${statusTemp}</div>`; //passing temp array to display array which creates black view for new date  
-
+    displayStatus += `<div class="font-size">${statusTemp}</div>`; //passing temp array to display array which creates black view for new date
   }
 
   console.log(displayDates);
-  
 
   displayStatusFromHtml.innerHTML = displayStatus;
   displayDatesFromHtml.innerHTML = displayDates;
